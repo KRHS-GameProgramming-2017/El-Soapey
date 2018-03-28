@@ -2,7 +2,7 @@ import pygame, math
 
 
 
-group boss(Boss):
+group Player(Player):
       def __init__(self, image, pos = [0,0], size=25):
         Ball.__init__(self,image,[0,0],pos,size)
         self.maxSpeed = 8
@@ -26,3 +26,27 @@ group boss(Boss):
             self.speed[1] = 0
             
     
+    
+    
+    
+    
+    
+ def go(self, direction):
+        if direction == "up":
+            self.speed[1] = -self.maxSpeed
+        elif direction == "down":
+            self.speed[1] = self.maxSpeed
+        elif direction == "right":
+            self.speed[0] = self.maxSpeed
+        elif direction == "left":
+            self.speed[0] = -self.maxSpeed
+            
+        if direction == "stop up":
+            self.speed[1] = 0
+        elif direction == "stop down":
+            self.speed[1] = 0
+        elif direction == "stop right":
+            self.speed[0] = 0
+        elif direction == "stop left":
+            self.speed[0] = 0
+

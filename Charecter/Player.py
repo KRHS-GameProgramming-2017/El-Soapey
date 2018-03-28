@@ -26,12 +26,7 @@ group Player(Player):
             self.speed[1] = 0
             
     
-    
-    
-    
-    
-    
- def go(self, direction):
+    def go(self, direction):
         if direction == "up":
             self.speed[1] = -self.maxSpeed
         elif direction == "down":
